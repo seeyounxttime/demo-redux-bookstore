@@ -71,11 +71,6 @@ const HomePage = () => {
             <SearchForm />
           </Stack>
         </FormProvider>
-        <PaginationBar
-          pageNum={pageNum}
-          setPageNum={setPageNum}
-          totalPageNum={totalPage}
-        />
       </Stack>
       <div>
         {status ? (
@@ -115,6 +110,13 @@ const HomePage = () => {
             ))}
           </Stack>
         )}
+        <Stack sx={{ display: "flex", alignItems: "center", m: "2rem" }}>
+          <PaginationBar
+            pageNum={pageNum}
+            setPageNum={setPageNum}
+            totalPageNum={totalPage}
+          />
+        </Stack>
       </div>
     </Container>
   );
